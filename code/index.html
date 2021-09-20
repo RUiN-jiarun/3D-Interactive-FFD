@@ -1,0 +1,55 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>FFD</title>
+	<meta charset="utf-8">
+	<link rel="stylesheet" href="css/main.css"></link>
+</head>
+<body>
+	<div id="container">
+		<div class="option" id="option">
+			<h2>Free-Form-Deformation</h2>
+			<p>Implement with Three.js</p>
+			<br>
+			<p>Models:</p>
+			<select id="dropdown" onchange="switchModel( this.value )">
+				<option value="0" selected>Box</option>
+				<option value="1">Torus</option>
+				<option value="2">TorusKnot</option>
+				<option value="3">Sphere</option>
+				<option value="4">Cylinder</option>
+				<option value="5">Octahedron</option>
+				<option value="6">Lathe</option>
+			</select>
+			
+			<p>Span count:</p> 
+			X:
+			<input type="button" onclick="changeSpanCount( 0, -1 );" value="-"/>
+			<span id="xcnt"> 2 </span>
+			<input type="button" onclick="changeSpanCount( 0, 1 );" value="+"/><br><br>
+			Y:
+			<input type="button" onclick="changeSpanCount( 1, -1 );" value="-"/>
+			<span id="ycnt"> 2 </span>
+			<input type="button" onclick="changeSpanCount( 1, 1 );" value="+"/><br><br>
+			Z:
+			<input type="button" onclick="changeSpanCount( 2, -1 );" value="-"/>
+			<span id="zcnt"> 2 </span>
+			<input type="button" onclick="changeSpanCount( 2, 1 );" value="+"/><br><br>
+			
+			<input type="checkbox" id="show_eval_pts" onchange="show_eval_pts_check = !show_eval_pts_check; deform();" />
+			<label for="show_eval_pts">Show evaluated points</label>
+
+			<div class="footer">
+				<h3>3180105640 刘佳润</h3>
+			</div>
+		</div>
+	</div>
+
+	<script src="threejs/three.js"></script>
+	<script src="threejs/OrbitControls.js"></script>
+	<script src="threejs/TransformControls.js"></script>
+	<script src="threejs/SubdivisionModifier.js"></script>
+	<script src="js/ffd.js"></script>
+	<script src="js/main.js"></script>
+</body>
+</html>

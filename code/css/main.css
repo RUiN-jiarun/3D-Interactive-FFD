@@ -1,0 +1,29 @@
+body {
+    margin: 0px;
+    overflow: hidden;
+}
+.option {
+    background-color: #dd11f8;
+    position: absolute;
+    width: 200px;
+    height: 100%;
+    text-align: center;
+    font-size: 15px;
+}
+select {
+    width: 120px;
+    height: 25px;
+    margin: 5px;
+    font-size: 15px;
+}
+select:hover {
+    cursor: pointer;
+}
+input:hover {
+    cursor: pointer;
+}
+.footer {
+    position: absolute;
+    left: 18px;
+    bottom: 50px;
+}
